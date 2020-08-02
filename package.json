@@ -1,19 +1,19 @@
 {
   "name": "chess-engine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Chess engine written in typescript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["lib/**/*"],
-  "keywords": ["typescript", "chess", "engine"],
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "typescript",
+    "chess",
+    "engine"
+  ],
   "devDependencies": {
-    "@chrisoakman/chessboardjs": "^1.0.0",
-    "@types/node": "^13.13.4",
-    "browserify": "^16.5.1",
-    "browserify-css": "^0.15.0",
-    "jquery": "^3.5.0",
     "prettier": "^2.0.5",
-    "tsify": "^4.0.1",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-loader": "^3.5.3",
@@ -23,12 +23,11 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "build:test": "browserify -t browserify-css ./tests/web/index.ts -p [ tsify --noImplicitAny ] > ./tests/web/app.bundle.js",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "bugs": {
     "url": "https://github.com/akcyp/chess-engine/issues"
